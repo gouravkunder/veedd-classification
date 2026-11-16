@@ -1,0 +1,72 @@
+{
+    "model_architecture": "ResNet152V2 Transfer Learning",
+    "input_resolution": "224x224x3",
+    "target_size": [
+        224,
+        224
+    ],
+    "color_mode": "RGB",
+    "num_classes": 12,
+    "class_names": [
+        "Black-grass",
+        "Charlock",
+        "Cleavers",
+        "Common Chickweed",
+        "Common wheat",
+        "Fat Hen",
+        "Loose Silky-bent",
+        "Maize",
+        "Scentless Mayweed",
+        "Shepherd's Purse",
+        "Small-flowered Cranesbill",
+        "Sugar beet"
+    ],
+    "label_mapping": {
+        "0": "Black-grass",
+        "1": "Charlock",
+        "2": "Cleavers",
+        "3": "Common Chickweed",
+        "4": "Common wheat",
+        "5": "Fat Hen",
+        "6": "Loose Silky-bent",
+        "7": "Maize",
+        "8": "Scentless Mayweed",
+        "9": "Shepherd's Purse",
+        "10": "Small-flowered Cranesbill",
+        "11": "Sugar beet"
+    },
+    "preprocessing_method": "tf.keras.applications.resnet_v2.preprocess_input",
+    "scaling_range": "[-1.0, 1.0]",
+    "training_augmentation": {
+        "random_flip": "horizontal",
+        "random_rotation_factor": 0.08,
+        "random_zoom_range": [
+            -0.08,
+            0.08
+        ],
+        "random_translation": [
+            0.05,
+            0.05
+        ],
+        "random_contrast_factor": 0.15,
+        "fill_mode": "reflect"
+    },
+    "tensorflow_version": "2.21.0",
+    "dataset": "Folder-labeled plant species dataset",
+    "selected_best_stage": "Stage 2 (Fine-Tuning)",
+    "best_val_loss": 0.6402424573898315,
+    "best_val_accuracy": 0.8898916840553284,
+    "stage1_metrics": {
+        "best_val_loss": 0.7993167638778687,
+        "best_val_accuracy": 0.8185920715332031
+    },
+    "stage2_metrics": {
+        "best_val_loss": 0.6402424573898315,
+        "best_val_accuracy": 0.8898916840553284
+    },
+    "final_model_path": "weed_resnet152v2_final.keras",
+    "best_model_path": "weed_resnet152v2_best.keras",
+    "class_names_path": "class_names.json",
+    "sample_fraction": null,
+    "training_complete": true
+}
