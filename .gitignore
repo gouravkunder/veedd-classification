@@ -1,0 +1,26 @@
+.venv/
+env/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Dataset images are distributed as a GitHub Release asset.
+dataset/*/
+
+# Trained model and intermediate training artifacts
+models/*.keras
+models/checkpoints/
+models/*checkpoint*
+models/*training*
+models/*history*
+logs/
+logs/tensorboard*/
+results/
+*.log
+
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
